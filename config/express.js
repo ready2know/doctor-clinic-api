@@ -13,6 +13,9 @@ app.use("/clinic", clinicRouter);
 const doctorRouter = require("../routes/doctor");
 app.use("/doctor", doctorRouter);
 
+const serviceRouter = require("../routes/service");
+app.use("/service", serviceRouter);
+
 app.use((error, req, res, next) => {
   if (!error) {
     return res.status(404).json({ message: "Not Found" });
